@@ -24,6 +24,7 @@ int main(int ac, char **av)
 	}
 	printf("%zu characters read\n", characters);
 	printf("buffer: %s\n", buffer);
+	printf("buffer address: %p\n", &buffer);
 
 	tokens = strtok(buffer, " ");
 	while (tokens != NULL)

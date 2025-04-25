@@ -13,11 +13,13 @@ int main(int ac, char **av)
 {
 	int child_pid;
 	char *buffer;
-	char *argv[] = {&buffer, NULL};
+	char *argv[99];
 	int status;
 	size_t buffer_size;
 	size_t line;
-
+	
+	argv[0] = &buffer;
+	argv[1] = '\0';
 	buffer = NULL;
 	buffer_size = 0;
 
